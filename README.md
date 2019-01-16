@@ -12,6 +12,14 @@ This tool is aim to provide easier access on Kubernetes funtionalities like:
 - `kubetail` that provides combination of pods' log
 - Recent history of commands
 
+### Installation
+
+We provide easy intallation with [`brew`](https://brew.sh/) + [`brew cask`](https://caskroom.io)
+
+```bash
+brew cask install plutux-labs/cask/kubernetes-utility
+```
+
 ### Usage
 
 - The application will take `~/.kube/config` by default
