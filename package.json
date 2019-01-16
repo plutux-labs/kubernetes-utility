@@ -11,7 +11,7 @@
     "build:all": "cross-env BUILD_TARGET=all node .electron-vue/build.js",
     "build:darwin": "cross-env BUILD_TARGET=darwin node .electron-vue/build.js",
     "build:darwin-no-asar": "cross-env BUILD_TARGET=darwin NO_ASAR=1 node .electron-vue/build.js",
-    "build:darwin-dmg-installer": "cross-env electron-installer-dmg ./build/Kubernetes\\ Utility-darwin-x64/Kubernetes\\ Utility.app \"Kubernetes Utility Installer\" --out=build --overwrite --icon=build/icons/icon.icns",
+    "build:darwin-dmg-installer": "cross-env electron-installer-dmg ./build/Kubernetes\\ Utility-darwin-x64/Kubernetes\\ Utility.app \"Kubernetes Utility Install\" --out=build --overwrite --icon=build/icons/icon.icns",
     "build:darwin-full": "npm run build:darwin && npm run build:darwin-dmg-installer",
     "build:linux": "cross-env BUILD_TARGET=linux node .electron-vue/build.js",
     "build:mas": "cross-env BUILD_TARGET=mas node .electron-vue/build.js",
