@@ -116,7 +116,7 @@ VuexStore.subscribe(({ type, payload }) => {
         const e = payload
         switch (true) {
           case e.type === 'command' && e.class === 'OpenTerminal':
-            OpenTerminal[e.func](...e.args)
+            if (OpenTerminal[e.func]) OpenTerminal[e.func](...e.args)
             break
           default:
             break

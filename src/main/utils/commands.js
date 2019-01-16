@@ -361,7 +361,7 @@ export class OpenTerminal {
   static runExec (containerName, podName, namespace) {
     let command = Command.appendKubecfgEnv(`${Command.kubectl.path} -n ${namespace} exec -it ${podName} -c ${containerName} /bin/bash`)
     terminalTab.open(command)
-    this.pushRecentHistory(this.runExec.name, arguments, {
+    this.pushRecentHistory('runExec', arguments, {
       action: 'exec',
       namespace,
       podName,
@@ -372,7 +372,7 @@ export class OpenTerminal {
   static runTail (containerName, podName, namespace) {
     let command = Command.appendKubecfgEnv(`${Command.kubectl.path} -n ${namespace} logs -f ${podName} -c ${containerName}`)
     terminalTab.open(command)
-    this.pushRecentHistory(this.runTail.name, arguments, {
+    this.pushRecentHistory('runTail', arguments, {
       action: 'tail',
       namespace,
       podName,
@@ -396,7 +396,7 @@ export class OpenTerminal {
     }
     let command = Command.appendKubecfgEnv(`${Command.kubectl.path} port-forward -n ${namespace} ${podName} ${localPort}:${port}`)
     terminalTab.open(command)
-    this.pushRecentHistory(this.runPortForward.name, arguments, {
+    this.pushRecentHistory('runPortForward', arguments, {
       action: 'port-forward',
       namespace,
       podName,
@@ -421,7 +421,7 @@ export class OpenTerminal {
     }
     let command = Command.appendKubecfgEnv(`${Command.kubectl.path} port-forward -n ${namespace} svc/${svcName} ${localPort}:${port}`)
     terminalTab.open(command)
-    this.pushRecentHistory(this.runPortForwardSvc.name, arguments, {
+    this.pushRecentHistory('runPortForwardSvc', arguments, {
       action: 'port-forward',
       namespace,
       svcName,
@@ -433,7 +433,7 @@ export class OpenTerminal {
   static runKubeTail (criteria, namespace) {
     let command = Command.appendKubecfgEnv(`${Command.kubetail.path} ${criteria} -n ${namespace}`)
     terminalTab.open(command)
-    this.pushRecentHistory(this.runKubeTail.name, arguments, {
+    this.pushRecentHistory('runKubeTail', arguments, {
       action: 'kube-tail',
       namespace,
       criteria
