@@ -62,6 +62,7 @@ class Command {
   static option = {
     env: {
       PATH: '/usr/local/bin:/usr/bin:/bin',
+      KUBETAIL_SINCE: '15m',
       AWS_CONFIG_FILE: `${os.homedir()}/.aws/config`,
       AWS_SHARED_CREDENTIALS_FILE: `${os.homedir()}/.aws/credentials`
     }
