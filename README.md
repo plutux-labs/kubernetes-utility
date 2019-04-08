@@ -19,7 +19,7 @@ We provide easy installation with [`brew`](https://brew.sh/) + [`brew cask`](htt
 ```bash
 # You may need to tap something first
 brew tap johanhaleby/kubetail
-brew tap plutux-labs/cask
+brew tap solacens/brew
 
 # Install it
 brew cask install kubernetes-utility
