@@ -73,14 +73,8 @@ class Command {
 
 export class Prerequisite {
   static fulfill () {
-    const KUBECONFIG_CREATE_FROM_EMPTY = `apiVersion: v1
-    clusters: []
-    contexts: []
-    current-context: ""
-    kind: Config
-    preferences: {}
-    users: []
-    `
+    const KUBECONFIG_CREATE_FROM_EMPTY_BASE64 = 'YXBpVmVyc2lvbjogdjEKY2x1c3RlcnM6IFtdCmNvbnRleHRzOiBbXQpjdXJyZW50LWNvbnRleHQ6ICIiCmtpbmQ6IENvbmZpZwpwcmVmZXJlbmNlczoge30KdXNlcnM6IFtdCgo='
+    const KUBECONFIG_CREATE_FROM_EMPTY = Buffer.from(KUBECONFIG_CREATE_FROM_EMPTY_BASE64, 'base64').toString('ascii')
 
     function which (cmd, alias) {
       let res = spawnSync('which', [cmd], Command.option)
