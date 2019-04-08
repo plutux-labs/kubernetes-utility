@@ -17,7 +17,12 @@ This tool is aim to provide easier access on Kubernetes funtionalities like:
 We provide easy installation with [`brew`](https://brew.sh/) + [`brew cask`](https://caskroom.io)
 
 ```bash
-brew cask install plutux-labs/cask/kubernetes-utility
+# You may need to tap something first
+brew tap johanhaleby/kubetail
+brew tap plutux-labs/cask
+
+# Install it
+brew cask install kubernetes-utility
 ```
 
 ### Usage
