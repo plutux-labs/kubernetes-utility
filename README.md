@@ -27,7 +27,8 @@ brew cask install kubernetes-utility
 
 ### Usage
 
-- The application will take `~/.kube/config` by default
+- The application will take Kubernetes config at `~/.kube/config` by default
+- The application will take AWS config at `~/.aws/` by default for supporting EKS authenication if necessary
 - The application will not take `KUBECONFIG` environment
 
 ```bash
