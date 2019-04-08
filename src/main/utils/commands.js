@@ -61,7 +61,9 @@ class Command {
 
   static option = {
     env: {
-      PATH: '/usr/local/bin:/usr/bin:/bin'
+      PATH: '/usr/local/bin:/usr/bin:/bin',
+      AWS_CONFIG_FILE: `${os.homedir()}/.aws/config`,
+      AWS_SHARED_CREDENTIALS_FILE: `${os.homedir()}/.aws/credentials`
     }
   }
 
